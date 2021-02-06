@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    width: 18rem;
+    border: 1px solid black;
+    margin: 1rem;
+    border-radius: 5px;
+}

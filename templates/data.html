@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="grid-container">
+    {% for entry in data["results"]: %}
+
+    <div class="grid-item" style="">
+        <img class="card-img-top" src="{{ entry['picture']['large'] }}" alt="Card image cap" styles="height: 4rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ entry['name']['title'] }}. {{ entry['name']['first'] }} {{ entry['name']['last']
+                }}</h5>
+            <p class="card-text">{{ entry['location']['street']['number'] }} {{ entry['location']['street']['name'] }},
+                {{ entry['location']['city'] }}, {{ entry['location']['state'] }} {{ entry['location']['postcode'] }}, {{ entry['location']['country'] }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
